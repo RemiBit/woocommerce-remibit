@@ -92,22 +92,22 @@ function woocommerce_tech_autho_init() {
             'enabled'      => array(
                   'title'        => __('Enable/Disable', 'tech'),
                   'type'         => 'checkbox',
-                  'label'        => __('Enable RemiBit Payment Module.', 'tech'),
+                  'label'        => __('Enable RemiBit Payment Module', 'tech'),
                   'default'      => 'no'),
             'title'        => array(
                   'title'        => __('Title:', 'tech'),
                   'type'         => 'text',
-                  'description'  => __('This controls the title which the user sees during checkout.', 'tech'),
+                  'description'  => __('This controls the title which the user sees during checkout', 'tech'),
                   'default'      => __('RemiBit', 'tech')),
             'description'  => array(
                   'title'        => __('Description:', 'tech'),
                   'type'         => 'textarea',
-                  'description'  => __('This controls the description which the user sees during checkout.', 'tech'),
-                  'default'      => __('Pay securely with crypto-currencies by RemiBit.', 'tech')),
+                  'description'  => __('This controls the description which the user sees during checkout', 'tech'),
+                  'default'      => __('Pay securely with cryptocurrencies by RemiBit', 'tech')),
             'login_id'     => array(
                   'title'        => __('Login ID', 'tech'),
                   'type'         => 'text',
-                  'description'  => __('This is API Login ID')),
+                  'description'  => __('API Login ID')),
             'transaction_key' => array(
                   'title'        => __('Transaction Key', 'tech'),
                   'type'         => 'text',
@@ -120,13 +120,13 @@ function woocommerce_tech_autho_init() {
             'success_message' => array(
                   'title'        => __('Transaction Success Message', 'tech'),
                   'type'         => 'textarea',
-                  'description'=>  __('Message to be displayed on successful transaction.', 'tech'),
-                  'default'      => __('Your payment has been processed successfully.', 'tech')),
+                  'description'=>  __('Message to be displayed on successful transaction', 'tech'),
+                  'default'      => __('Your payment has been processed successfully', 'tech')),
             'failed_message'  => array(
                   'title'        => __('Transaction Failed Message', 'tech'),
                   'type'         => 'textarea',
-                  'description'  =>  __('Message to be displayed on failed transaction.', 'tech'),
-                  'default'      => __('Your transaction has been declined.', 'tech')),
+                  'description'  =>  __('Message to be displayed on failed transaction', 'tech'),
+                  'default'      => __('Your transaction has been declined', 'tech')),
             'working_mode'    => array(
                   'title'        => __('API Mode'),
                   'type'         => 'select',
@@ -136,7 +136,7 @@ function woocommerce_tech_autho_init() {
                   'title'        => __('Transaction Mode'),
                   'type'         => 'select',
                   'options'      => array( 'auth_capture'=>'Authorize and Capture', 'authorize'=>'Authorize Only'),
-                  'description'  => "Transaction Mode. If you are not sure what to use set to Authorize and Capture" )
+                  'description'  => "Transaction Mode. If you are not sure what to use, set to Authorize and Capture" )
          );
       }
       
@@ -147,8 +147,8 @@ function woocommerce_tech_autho_init() {
       **/
       public function admin_options()
       {
-         echo '<h3>'.__('RemiBit  Payment Gateway', 'tech').'</h3>';
-         echo '<p>'.__('RemiBit payment gateway for online crypto payment processing.').'</p>
+         echo '<h3>'.__('RemiBit Payment Gateway', 'tech').'</h3>';
+         echo '<p>'.__('RemiBit payment gateway for online crypto payment processing').'</p>
          <p><a href="https://github.com/RemiBit/woocommerce-remibit/">Check here for updates.</a></p>
          ';
          echo '<table class="form-table">';
@@ -175,7 +175,7 @@ function woocommerce_tech_autho_init() {
       **/
       function receipt_page($order)
       {
-         echo '<p>'.__('Thank you for your order, please click the button below to pay with RemiBit.', 'tech').'</p>';
+         echo '<p>'.__('Thank you for your order. Please click the button below to pay with RemiBit', 'tech').'</p>';
          echo $this->generate_authorize_form($order);
       }
       
@@ -424,7 +424,7 @@ function woocommerce_tech_autho_init() {
                . '<script type="text/javascript">
                   jQuery(function(){
                      jQuery("body").block({
-                           message: "<img src=\"'.$woocommerce->plugin_url().'/assets/images/wpspin-2x.gif\" alt=\"Redirecting…\" style=\"float:left; margin-right: 10px;\" />'.__('Thank you for your order. We are now redirecting you to RemiBit to make payment.', 'tech').'",
+                           message: "<img src=\"'.$woocommerce->plugin_url().'/assets/images/wpspin-2x.gif\" alt=\"Redirecting…\" style=\"float:left; margin-right: 10px;\" />'.__('Thank you for your order. We are now redirecting you to RemiBit to make the payment', 'tech').'",
                            overlayCSS:
                         {
                            background:       "#ccc",
