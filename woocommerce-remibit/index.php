@@ -116,7 +116,7 @@ function woocommerce_tech_autho_init() {
                   'title'        => __('Signature Key', 'tech'),
                   'type'         => 'text',
                   'description'  =>  __('Signature Key is required to validate the response from RemiBit. 
-                  Paste the 128 character key as it is. NOTE: when you copy and paste the Signature Key, make sure there is no whitespace before or after.', 'tech')),
+                  Paste the 128 character key as it is. NOTE: when you copy and paste the Signature Key, make sure there is no whitespace before or after', 'tech')),
             'success_message' => array(
                   'title'        => __('Transaction Success Message', 'tech'),
                   'type'         => 'textarea',
