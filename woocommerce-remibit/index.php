@@ -1,7 +1,7 @@
 <?php
 /*
    Plugin Name: RemiBit Payment Gateway For WooCommerce
-   Description: Accept crypto-currencies by RemiBit multi crypto payment processor
+   Description: Accept cryptocurrencies with RemiBit multi crypto payment processor
    Version: 5.0
    Plugin URI: https://github.com/RemiBit/woocommerce-remibit
    Author: Blockchain Remittance Ltd
@@ -103,7 +103,7 @@ function woocommerce_tech_autho_init() {
                   'title'        => __('Description:', 'tech'),
                   'type'         => 'textarea',
                   'description'  => __('This controls the description which the user sees during checkout', 'tech'),
-                  'default'      => __('Pay securely with cryptocurrencies by RemiBit', 'tech')),
+                  'default'      => __('Pay securely using cryptocurrencies with RemiBit', 'tech')),
             'login_id'     => array(
                   'title'        => __('Login ID', 'tech'),
                   'type'         => 'text',
@@ -116,7 +116,7 @@ function woocommerce_tech_autho_init() {
                   'title'        => __('Signature Key', 'tech'),
                   'type'         => 'text',
                   'description'  =>  __('Signature Key is required to validate the response from RemiBit. 
-                  Paste 128 character key as it is. NOTE: make sure when you copy and paste signature there is no whitespace before after.', 'tech')),
+                  Paste the 128 character key as it is. NOTE: when you copy and paste the Signature Key, make sure there is no whitespace before or after.', 'tech')),
             'success_message' => array(
                   'title'        => __('Transaction Success Message', 'tech'),
                   'type'         => 'textarea',
@@ -149,7 +149,7 @@ function woocommerce_tech_autho_init() {
       {
          echo '<h3>'.__('RemiBit Payment Gateway', 'tech').'</h3>';
          echo '<p>'.__('RemiBit payment gateway for online crypto payment processing').'</p>
-         <p><a href="https://github.com/RemiBit/woocommerce-remibit/">Check here for updates.</a></p>
+         <p><a href="https://github.com/RemiBit/woocommerce-remibit/">Check here for updates</a></p>
          ';
          echo '<table class="form-table">';
          $this->generate_settings_html();
@@ -290,7 +290,7 @@ function woocommerce_tech_autho_init() {
                }
 
             }else{
-               $order->add_order_note('SHA hash mismatched for this transaction. Please contact support <a href="http://www.remibit.com/">contact support</a> for help.');
+               $order->add_order_note('SHA hash mismatched for this transaction. Please contact support <a href="http://www.remibit.com/">contact support</a> for help');
             }
             $redirect_url = $order->get_checkout_order_received_url();
             $this->web_redirect( $redirect_url); exit;
