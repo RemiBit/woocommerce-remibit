@@ -11,7 +11,7 @@ INSTALLATION AND CONFIGURATION
 
 1. Fetch the plugin from RemiBit github:
 
-https://github.com/RemiBit/woocommerce-remibit/releases/
+https://github.com/RemiBit/woocommerce-remibit/releases/latest
 
 Right click on woocommerce-remibit.zip and save it on your computer.
   
